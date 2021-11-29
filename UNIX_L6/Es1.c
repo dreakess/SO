@@ -7,7 +7,7 @@
 
 int main() {
 	
-	int m = msgget(IPC_PRIVATE, IPC_CREAT | 0666);
+	int m = msgget(IPC_PRIVATE, IPC_CREAT | 0666); // creazione della coda di messaggi
 	struct msqid_ds tmp;
 
 	if(m != -1){
