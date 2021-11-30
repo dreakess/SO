@@ -21,7 +21,7 @@ int main() {
 	for(;term>=0;) {
 		fgets(q.mtext, 256,stdin);
 	
-		q.mtype = m;
+		q.mtype = term;
 		if(msgsnd(m, &q, sizeof(q), IPC_NOWAIT) == -1) {printf("errore..\n");}
 		msgctl(m, IPC_STAT, &tmp);	
 		
